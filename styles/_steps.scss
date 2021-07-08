@@ -1,0 +1,78 @@
+.steps {
+    padding: 120px 0;
+    color: $headerColor;
+    &.stepShade {
+        background-color: $shadeColor;
+        color: rgba($headerColor, 0.8);
+        .faq-title {
+            color: rgba($headerColor, 0.8);
+            padding: 14px 19px 14px 0px;
+            @media only screen and (max-width: 768px) {
+                padding-left: 0;
+            }
+        }
+    }
+    h2 {
+        margin-bottom: 24px;
+        @include headingWithIcon;
+        position: relative;
+        padding-left: 12px+36px;
+        &.step1::before {
+            content: url(../images/in-progress1.png);
+        }
+        &.step2::before {
+            content: url(../images/in-progress2.png);
+        }
+        &.step3::before {
+            content: url(../images/in-progress3.png);
+        }
+    }
+    h3 {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    ol {
+        list-style: decimal;
+        padding-left: 18px;
+    }
+    .step-leftCol {
+        padding-bottom: 30px;
+        @media only screen and (min-width: 769px) {
+            width: percentage(327px/$originalWrapperWidth);
+            float: left;
+            // padding-right: 20px;
+            margin-right: percentage(78px/$originalWrapperWidth);
+        }
+        li {
+            margin-bottom: $smallSpace;
+        }
+    }
+    .step-rightCol {
+        @media only screen and (min-width: 769px) {
+            float: left;
+            width: percentage(790px/$originalWrapperWidth);
+        }
+    }
+    .wrapper {
+        @include clearFix;
+    }
+    p {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    ul li {
+        @include faqListStyle;
+    }
+}
+
+.faq-steps {
+    margin-top: 49px;
+    .faq-title {
+        color: rgba($headerColor, 0.8);
+        &::after {
+            top: 28px;
+        }
+    }
+}

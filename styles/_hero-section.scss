@@ -1,0 +1,236 @@
+.hero {
+    padding: 100px 0 0;
+    h4 {
+        margin: $normalSpace 0;
+        color: $darkShade;
+        @media only screen and (min-width: 980px) {
+            padding-right: 100px;
+        }
+    }
+    @media only screen and (min-width: 981px) {
+        width: 60%;
+        padding: 100px 0 150px;
+    }
+    .btn-wrapper {
+        display: flex;
+    }
+    &.hero2 {
+        @media only screen and (min-width: 981px) {
+            width: 610px;
+            max-width: 100%;
+        }
+        h1 {
+            margin-bottom: $normalSpace;
+            letter-spacing: -0.4px;
+            color: $darkBrown;
+        }
+        h5 {
+            margin-bottom: $smallSpace*2;
+        }
+        h3 {
+            margin-bottom: 8px;
+        }
+        h4 {
+            margin-bottom: $normalSpace;
+            color: $darkShade;
+            padding-right: 0;
+        }
+        p {
+            color: $darkShade;
+            &:not(:last-child) {
+                margin-bottom: $normalSpace;
+            }
+        }
+    }
+    &.serviceChild-hero {
+        @media only screen and (min-width: 981px) {
+            width: percentage(708px/$originalWrapperWidth);
+        }
+    }
+    .get-in-touch {
+        width: 604px;
+        max-width: 100%;
+        padding: 0;
+        background-color: transparent;
+        h4 {
+            padding-right: 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        input[type=submit] {
+            width: 180px;
+        }
+    }
+    &.resource-hero {
+        width: 100%;
+        padding: {
+            bottom: 86px;
+        }
+        h1 {
+            margin-bottom: 12px;
+        }
+        h3 {
+            margin-bottom: 40px;
+        }
+    }
+    &.contact-hero {
+        strong {
+            font-weight: 600;
+        }
+    }
+    &.hero-charities {
+        width: 850px;
+        max-width: 100%;
+        h1 {
+            margin-bottom: 16px;
+        }
+        h3 {
+            margin-bottom: $normalSpace;
+            padding-right: 20px;
+        }
+    }
+}
+
+.landing-hero {
+    $originalWrapperWidth: 1243px;
+    &.landing2 {
+        $originalWrapperWidth: 1214px;
+        .hero-img {
+            @media only screen and (min-width: 981px) {
+                width: percentage(548px/$originalWrapperWidth);
+                margin-top: -45px;
+            }
+        }
+        .get-in-touch form {
+            width: 100%;
+            .terms {
+                a {
+                    color: $checkboxLink;
+                    font-weight: normal;
+                }
+            }
+        }
+        .hero.hero2 {
+            h1,
+            h4 {
+                color: $headerColor;
+            }
+        }
+    }
+    .wrapper {
+        width: $originalWrapperWidth;
+    }
+    .hero {
+        @media only screen and (min-width: 981px) {
+            width: percentage(750px/$originalWrapperWidth);
+        }
+        h1 {
+            @media only screen and (max-width: 540px) {
+                font-size: 11.5vw;
+                line-height: 13vw;
+            }
+        }
+    }
+    .hero-img {
+        padding: 20px;
+        margin-top: 50px;
+        @media only screen and (min-width: 981px) {
+            width: percentage(494px/$originalWrapperWidth);
+            padding: 0;
+            margin-top: 0;
+        }
+        @media only screen and (max-width: 980px) {
+            margin-left: 0;
+        }
+    }
+    .btn-wrapper {
+        a {
+            width: 235px;
+        }
+    }
+}
+
+.reverseCol {
+    background-color: $shadeColor;
+    padding: 120px 0 100px;
+    .wrapper {
+        @include clearFix;
+    }
+    .hero-img {
+        @media only screen and (min-width: 981px) {
+            width: percentage(419px/$originalWrapperWidth);
+            right: auto;
+            left: 15px;
+            top: 0;
+            transform: none;
+        }
+        @media only screen and (max-width: 980px) {
+            margin-left: 0;
+        }
+        h2 {
+            text-align: left;
+            @media only screen and (max-width: 980px) {
+                margin-left: 0;
+                margin-bottom: 24px;
+            }
+        }
+        img {
+            @media only screen and (max-width: 980px) {
+                display: none;
+            }
+        }
+    }
+    .hero {
+        h4 {
+            font-weight: bold;
+        }
+        @media only screen and (min-width: 981px) {
+            width: 60%;
+            padding: 0;
+            float: right;
+        }
+        @media only screen and (max-width: 980px) {
+            padding-top: 0;
+        }
+    }
+    &.landingReverse {
+        .hero {
+            width: 100%;
+            max-width: 900px;
+            float: left;
+            h2 {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+.hero-img {
+    text-align: center;
+    img {
+        max-width: 100%;
+    }
+    &.service-childImg {
+        margin-top: $normalSpace;
+        @media only screen and (min-width: 981px) {
+            width: 56%;
+            margin-right: -100px;
+            margin-top: -90px;
+        }
+    }
+    @media only screen and (min-width: 981px) {
+        @include verticalAlign();
+        width: 49%;
+    }
+    @media only screen and (max-width: 980px) {
+        margin-left: -40px;
+    }
+}
+
+.our-retainer {
+    .cta-temp1 {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+//fonts
+$primaryFont: 'Merriweather';
+$secondaryFont: 'Open Sans';
+// colors
+$headerColor: #2C303C;
+$darkShade: rgba($headerColor, 0.8);
+$linkColor: $headerColor;
+$primaryColor: #FF9A3D;
+$parWhite: #fff;
+$shadeColor: #F4F4F1;
+$paragraphShade: rgba(#fff, 0.8);
+$darkBG: $headerColor;
+$megaMenuMobileBG: #393D4A;
+$darkBrown: #3C3C3C;
+$lineBorderColor: rgba(#fff, 0.1);
+$inputBorderColor: #D0D0D0;
+$landing-toprightColor: #50525D;
+$checkboxLink: #3468BB;
+//other properties
+$wrapperSidePadding: 15px;
+$originalWrapperWidth: 1197px+($wrapperSidePadding*2);
+$smallSpace: 8px;
+$normalSpace: $smallSpace*3;

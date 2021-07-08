@@ -1,0 +1,180 @@
+@import './reset';
+@import './font';
+@import './variables';
+@import './mixins';
+@import './base';
+@import './header';
+@import './hero-section';
+@import './delivering-compliance';
+@import './our-approach';
+@import './our-services';
+@import './faqs';
+@import './bottom-form';
+@import './call-to-action';
+@import './steps';
+@import './testimonials';
+@import './dark-sections';
+@import './retainer';
+@import './resources';
+@import './contact';
+@import './blog-post';
+@import './privacy-policy';
+@import './landing';
+@import './footer';
+.tailoring-service {
+    padding: 120px 0 159px;
+    .wrapper {
+        @media only screen and (min-width: 981px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        h2 {
+            margin-right: 90px;
+            width: 110%;
+            @media only screen and (max-width: 980px) {
+                margin-bottom: $normalSpace;
+            }
+        }
+        h4 {
+            line-height: 24px;
+        }
+    }
+}
+
+.support-business {
+    @extend .tailoring-service;
+    .wrapper {
+        display: block;
+        @include clearFix;
+        h2 {
+            width: 491px;
+            float: left;
+            margin-bottom: 0;
+            margin-right: 0;
+            @media only screen and (max-width: $originalWrapperWidth) {
+                width: percentage(491px/$originalWrapperWidth);
+            }
+            @media only screen and (max-width: 980px) {
+                width: 100%;
+                float: none;
+                margin-bottom: $normalSpace;
+            }
+        }
+        p {
+            width: 648px;
+            float: right;
+            @media only screen and (max-width: $originalWrapperWidth) {
+                width: percentage(648px/$originalWrapperWidth);
+            }
+            @media only screen and (max-width: 980px) {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+}
+
+.facts-data-breaches {
+    padding: 120px 0 160px;
+    background-color: $shadeColor;
+    h2 {
+        margin-bottom: $normalSpace;
+    }
+    .two-cols-inner {
+        h2 {
+            color: $primaryColor;
+        }
+        h5 {
+            margin-bottom: 12px;
+            color: $darkShade;
+        }
+        .fact-left-item {
+            p {
+                font-size: 14px;
+            }
+            &:not(:last-child) {
+                margin-bottom: $normalSpace;
+            }
+        }
+        .two-colsRight {
+            padding-top: $normalSpace;
+            @media only screen and (min-width: 981px) {
+                width: 49%;
+                float: right;
+                padding-top: 100px;
+            }
+            p {
+                &:not(:last-child) {
+                    margin-bottom: $normalSpace;
+                }
+                a {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+
+.uk-gdpr {
+    padding: 120px 0;
+    background-color: $darkBG;
+    .wrapper {
+        width: 1179px;
+        h2 {
+            margin-bottom: $normalSpace;
+            &+p {
+                margin-bottom: 64px;
+                width: 586px;
+                max-width: 100%;
+                span {
+                    color: $primaryColor;
+                }
+            }
+        }
+        .two-cols-inner {
+            &:not(:last-child) {
+                margin-bottom: 44px;
+            }
+            .two-colsLeft {
+                width: 50%;
+                padding-right: 120px;
+                @media only screen and (max-width: 980px) {
+                    width: 100%;
+                    padding-right: 0;
+                    float: none;
+                }
+                h3 {
+                    text-align: right;
+                    @media only screen and (max-width: 980px) {
+                        text-align: left;
+                        margin-bottom: $normalSpace;
+                    }
+                }
+            }
+            .two-colsRight {
+                float: right;
+                width: 50%;
+                @media only screen and (max-width: 980px) {
+                    width: 100%;
+                    padding-right: 0;
+                    float: none;
+                }
+                p {
+                    margin-bottom: 8px;
+                }
+                a {
+                    font-weight: 600;
+                    @include linkHoverBorder;
+                    color: $parWhite !important;
+                }
+            }
+        }
+        h2,
+        h3 {
+            color: $parWhite;
+        }
+        p {
+            color: $paragraphShade;
+        }
+    }
+}

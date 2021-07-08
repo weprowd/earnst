@@ -1,0 +1,102 @@
+.bottom-form {
+    padding: 115px 0;
+    text-align: center;
+    form {
+        width: 526px;
+        max-width: 100%;
+        margin: {
+            top: 30px;
+            left: auto;
+            right: auto;
+        }
+    }
+    .wrapper {
+        width: 650px + $wrapperSidePadding;
+    }
+    h3 {
+        margin-top: 20px;
+        font-weight: normal;
+        color: $darkShade;
+    }
+    .form-twoCol {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        @media only screen and (max-width: 980px) {
+            flex-direction: column;
+        }
+        input:nth-of-type(1) {
+            margin-right: 25px;
+        }
+    }
+    input {
+        @extend body;
+        width: 100%;
+        border-bottom: 1px solid $inputBorderColor;
+        padding: 10px 0;
+        outline: 0;
+        &[type=submit] {
+            @extend .btn;
+            background-color: $primaryColor;
+            width: 282px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            font-weight: normal;
+            &:hover {
+                color: $parWhite;
+            }
+        }
+    }
+    .terms {
+        position: relative;
+        margin: 45px auto 24px;
+        display: block;
+        width: 230px;
+        input {
+            opacity: 0;
+            left: 0;
+            @include verticalAlign;
+            height: 100%;
+            width: 20px;
+            z-index: 2;
+            &:checked+span:after {
+                display: block;
+            }
+        }
+        span {
+            display: inline-block;
+            position: relative;
+            padding-left: 25px;
+            font-size: 14px;
+            &:before {
+                content: '';
+                width: 16px;
+                height: 16px;
+                display: block;
+                border: 1px solid $headerColor;
+                @include verticalAlign;
+                left: 0;
+            }
+            &:after {
+                content: '';
+                background: url(../images/checked2.png);
+                position: absolute;
+                color: $primaryColor;
+                left: 2px;
+                font-weight: bold;
+                font-size: 26px;
+                display: none;
+                top: 1px;
+                width: 20px;
+                height: 16px;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $checkboxLink;
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+}

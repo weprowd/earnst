@@ -1,0 +1,63 @@
+.testimonialType1 {
+    .two-cols-inner {
+        h2 {
+            color: rgba($parWhite, 0.9);
+        }
+    }
+    .two-colsRight {
+        h3 {
+            color: #fff;
+            color: $paragraphShade;
+            font-style: italic;
+            margin-bottom: $normalSpace;
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+        }
+        span {
+            font-size: 24px;
+        }
+        .name {
+            color: rgba($parWhite, 0.9);
+        }
+    }
+}
+
+.service-section {
+    padding: 120px 0;
+    h2 {
+        margin-bottom: 24px;
+    }
+}
+
+.data-breaches {
+    @extend .service-section;
+    h2 {
+        color: $parWhite;
+    }
+    p {
+        color: $paragraphShade;
+    }
+}
+
+.three-cols {
+    padding-top: 64px;
+    @media only screen and (min-width: 769px) {
+        display: flex;
+    }
+    >div {
+        width: 100%;
+        &:not(:last-child) {
+            margin-right: 46px;
+            @media only screen and (max-width: 768px) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    h2 {
+        color: $primaryColor;
+    }
+    h5 {
+        color: $paragraphShade;
+    }
+}

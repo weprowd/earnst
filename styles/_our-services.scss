@@ -1,0 +1,103 @@
+.our-services {
+    padding: 115px 0 80px;
+    background-color: $darkBG;
+    &.white-section {
+        background-color: #fff;
+        h2 {
+            color: $headerColor;
+        }
+        h4 {
+            color: $darkShade;
+        }
+        .two-col {
+            h4,
+            h3,
+            p {
+                color: $darkShade;
+            }
+            p {
+                padding-right: 0;
+            }
+        }
+    }
+    h2,
+    h4 {
+        color: $parWhite;
+    }
+    h4 {
+        margin-top: 30px;
+        margin-bottom: 60px;
+        width: 953px;
+        max-width: 100%;
+        color: $paragraphShade;
+    }
+    .two-col {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 980px) {
+            flex-direction: column;
+        }
+        h3 {
+            color: $parWhite;
+            margin-bottom: 14px;
+            position: relative;
+            padding-left: 50px;
+            @include headingWithIcon;
+            &.assessing-risk-icon:before {
+                content: url(../images/how-it-works-icon1.png);
+            }
+            &.training-needs-icon:before {
+                content: url(../images/how-it-works-icon2.png);
+            }
+            &.winning-new-icon:before {
+                content: url(../images/how-it-works-icon3.png);
+            }
+            &.avoid-penalties-icon:before {
+                content: url(../images/how-it-works-icon4.png);
+            }
+            &.service1::before {
+                content: url(../images/service-icon1.png);
+            }
+            &.service2::before {
+                content: url(../images/service-icon2.png);
+            }
+            &.service3::before {
+                content: url(../images/service-icon3.png);
+            }
+            &.service4::before {
+                content: url(../images/service-icon4.png);
+            }
+            &.service5::before {
+                content: url(../images/service-icon5.png);
+            }
+            &.service6::before {
+                content: url(../images/service-icon6.png);
+            }
+        }
+        p {
+            color: $paragraphShade;
+            margin-bottom: 10px;
+            @media only screen and (min-width: 981px) {
+                padding-right: 80px;
+            }
+        }
+        .column {
+            width: 100%;
+            margin-bottom: 50px;
+            &:first-of-type {
+                @media only screen and (min-width: 981px) {
+                    margin-right: 101px;
+                }
+            }
+        }
+        a {
+            @include linkHoverBorder;
+            color: $parWhite !important;
+            font-weight: 600;
+            position: relative;
+            &:hover:before {
+                width: 100%;
+            }
+        }
+    }
+}

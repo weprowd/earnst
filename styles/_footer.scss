@@ -1,0 +1,106 @@
+footer {
+    .wrapper {
+        width: 1439px;
+        @include clearFix;
+    }
+    p {
+        color: $paragraphShade;
+    }
+}
+
+.footer-top {
+    @include clearFix;
+    background-color: $darkBG;
+    padding: 70px 15px;
+    @media only screen and (max-width: 980px) {
+        padding: 50px 0 20px;
+    }
+}
+
+.ftop-left {
+    float: left;
+    width: 50%;
+    display: flex;
+    color: $paragraphShade;
+    p:first-of-type {
+        margin-bottom: 15px;
+        color: $parWhite;
+    }
+    >div {
+        &:not(:last-of-type) {
+            margin-right: 106px;
+            @media only screen and (max-width: 1240px) {
+                margin: 0 10px;
+            }
+        }
+        @media only screen and (max-width: 980px) {
+            margin-bottom: 24px !important;
+        }
+    }
+    a {
+        color: $paragraphShade;
+        text-decoration: none;
+        font-weight: normal;
+        @include linkHover;
+    }
+    @media only screen and (max-width: 980px) {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.ftop-right {
+    padding-right: 5%;
+    float: right;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    >div {
+        margin-left: 24px;
+    }
+    .example-text {
+        width: 244px;
+        max-width: 100%;
+        height: 127px;
+        border: 1px solid $primaryColor;
+        p {
+            color: $parWhite;
+            padding: 15px;
+        }
+        @media only screen and (max-width: 1240px) {
+            margin: 0 10px 10px;
+        }
+        @media only screen and (max-width: 980px) {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 980px) {
+        padding: 0 20px;
+        // width: 30%;
+        flex-direction: column;
+    }
+    @media only screen and (max-width: 980px) {
+        width: 100%;
+        align-items: center;
+        padding: 20px 0 0;
+    }
+}
+
+.footer-bottom {
+    background-color: $megaMenuMobileBG;
+    text-align: right;
+    padding: 27px 50px;
+    a {
+        @extend body;
+        color: $parWhite;
+        text-decoration: none;
+        margin: 0 10px;
+        @media only screen and (max-width: 980px) {
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        @include linkHover;
+    }
+}

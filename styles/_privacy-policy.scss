@@ -1,0 +1,62 @@
+.privacy-policy {
+    h1 {
+        margin-bottom: $normalSpace;
+    }
+    .post-author {
+        border-bottom: 0;
+        padding: 0;
+    }
+    article p {
+        margin-bottom: $normalSpace;
+        color: $darkShade;
+    }
+    ul {
+        list-style: disc;
+        padding-left: 21px;
+        li {
+            margin-bottom: $normalSpace;
+        }
+    }
+    .sub-number {
+        counter-reset: section;
+        font-size: 16px;
+        padding-left: 68px;
+        list-style: none;
+        li {
+            margin-bottom: 24px;
+            position: relative;
+            padding-left: 55px;
+            &::before {
+                counter-increment: section;
+                content: "4." counter(section) ")";
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 32px;
+                position: absolute;
+                top: -5px;
+                left: 0;
+            }
+        }
+    }
+    .post-content {
+        @include clearFix
+    }
+    .table-temp1 {
+        width: 100%;
+        margin-bottom: 36px;
+        td,
+        th {
+            border: 1px solid $inputBorderColor;
+            padding: 12px;
+            font-size: 16px;
+            text-align: left;
+            color: $darkShade;
+        }
+        th {
+            background-color: $shadeColor;
+            font-size: 18px;
+            font-weight: 400;
+            color: $headerColor;
+        }
+    }
+}

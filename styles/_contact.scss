@@ -1,0 +1,79 @@
+.hero3 {
+    width: 788px;
+    max-width: 100%;
+    padding-bottom: 120px;
+    h1 {
+        @media only screen and (max-width: 460px) {
+            font-size: 13vw;
+            line-height: 15vw;
+        }
+    }
+}
+
+.contactGrid {
+    @include clearFix;
+    padding-bottom: 120px;
+    form {
+        width: 100%;
+        input[type=submit] {
+            width: 180px;
+        }
+    }
+    .get-in-touch {
+        h3 {
+            font-weight: 600;
+            color: $headerColor;
+            margin-bottom: $smallSpace*2;
+        }
+        p {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.cGrid-col1 {
+    text-align: center;
+    padding-bottom: 50px;
+    margin-left: -80px;
+    @media only screen and (min-width: 981px) {
+        $newWidth: $originalWrapperWidth - 689px;
+        width: percentage( $newWidth/$originalWrapperWidth);
+        float: left;
+        padding-bottom: 0;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.cGrid-col2 {
+    @media only screen and (min-width: 981px) {
+        width: percentage(689px/$originalWrapperWidth);
+        float: right;
+    }
+}
+
+.get-in-touch {
+    @extend .bottom-form;
+    background-color: $shadeColor;
+    padding: 40px;
+    text-align: left;
+    form {
+        margin-top: $smallSpace*2;
+    }
+    h2 {
+        margin-bottom: $smallSpace*2;
+    }
+    p {
+        margin-bottom: $smallSpace;
+    }
+    input {
+        background-color: transparent;
+    }
+    .terms,
+    input[type=submit] {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+}

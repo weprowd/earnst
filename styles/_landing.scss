@@ -1,0 +1,122 @@
+.landing-col {
+    .hero {
+        h4 {
+            color: $headerColor;
+        }
+    }
+}
+
+.landing-howitWorks {
+    &.our-services.white-section {
+        .two-col h3 {
+            color: $headerColor;
+            font-weight: 600;
+        }
+    }
+}
+
+.landing2 {
+    .hero {
+        padding: {
+            top: 78px;
+        }
+    }
+    .get-in-touch {
+        .terms {
+            width: 100%;
+            margin: {
+                top: 40px;
+                bottom: $normalSpace;
+            }
+        }
+        input {
+            color: $headerColor;
+            &[type=submit]:hover {
+                color: $parWhite;
+            }
+        }
+    }
+}
+
+.topRight {
+    padding: 25px 0;
+    p {
+        font-size: 16px;
+        color: $landing-toprightColor;
+        font-weight: 600;
+        a {
+            color: $linkColor;
+            @media only screen and (max-width: 980px) {
+                color: #fff;
+            }
+        }
+        @media only screen and (max-width: 980px) {
+            color: #fff;
+        }
+    }
+    @media only screen and (max-width: 980px) {
+        padding: 20px;
+    }
+}
+
+.company-section {
+    &.non-landing {
+        padding: 90px 0 80px;
+        .wrapper ul {
+            @media only screen and (max-width: 800px) {
+                padding-top: 0;
+            }
+        }
+    }
+    padding-bottom: 120px;
+    .wrapper {
+        width: 1011px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.7;
+            @media only screen and (max-width: 800px) {
+                flex-direction: column;
+                padding-top: 100px;
+            }
+            li {
+                &:not(:last-child) {
+                    @media only screen and (max-width: 800px) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.get-in-touch-landing {
+    background-color: $shadeColor;
+    padding: 124px 0 (112px-$normalSpace);
+    .wrapper {
+        @media only screen and (min-width: 981px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        h4 {
+            float: left;
+            width: 917px;
+            max-width: 100%;
+            font-weight: 600;
+            line-height: 28px;
+            margin-bottom: $normalSpace;
+            color: $headerColor;
+        }
+    }
+}
+
+.landing-hero1 {
+    .hero-img {
+        right: -40px;
+    }
+    p {
+        width: 581px;
+        max-width: 100%;
+    }
+}

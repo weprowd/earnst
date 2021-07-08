@@ -1,0 +1,22 @@
+.delivering-compliance {
+    .two-cols-inner {
+        @media only screen and (min-width: 981px) {
+            display: flex;
+        }
+        .two-colsLeft {
+            float: none;
+            margin-right: 140px;
+            width: 100%;
+            @media only screen and (max-width: 980px) {
+                margin: {
+                    right: 0;
+                    bottom: $normalSpace;
+                }
+            }
+        }
+        .two-colsRight {
+            float: none;
+            width: 100%;
+        }
+    }
+}

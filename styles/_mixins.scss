@@ -1,0 +1,70 @@
+@mixin verticalAlign {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    line-height: 0;
+}
+
+@mixin horizontalAlign {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    line-height: 0;
+}
+
+@mixin clearFix {
+    &::after,
+    &::before {
+        content: '';
+        overflow: hidden;
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin headingWithIcon {
+    &:before {
+        content: url(../images/service-headIcon.png);
+        left: 0;
+        line-height: 0;
+        @include verticalAlign;
+    }
+}
+
+@mixin faqListStyle {
+    position: relative;
+    &::after {
+        border-bottom: 1px solid #2C303C;
+        opacity: 0.3;
+        content: '';
+        display: block;
+        height: 1px;
+    }
+}
+
+@mixin linkHover {
+    &:hover {
+        color: $primaryColor;
+    }
+}
+
+@mixin linkHoverBorder {
+    & {
+        color: $headerColor;
+        position: relative;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-bottom: 1px solid $primaryColor;
+        width: 0;
+        bottom: -4px;
+        transition: all 0.6s;
+    }
+    &:hover::before {
+        width: 100%;
+    }
+}

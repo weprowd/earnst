@@ -1,0 +1,48 @@
+.shadeBgDark {
+    .cta-temp1 h4 {
+        color: $paragraphShade;
+    }
+}
+
+.cta-temp1 {
+    padding: 120px 0;
+    width: 950px;
+    max-width: 100%;
+    @media only screen and (max-width: 980px) {
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: $normalSpace;
+    }
+    h4 {
+        margin-bottom: $normalSpace;
+        line-height: 28px;
+        color: $darkShade;
+    }
+    .btn {
+        width: 235px;
+        @media only screen and (max-width: 980px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &.call-us {
+        .btn {
+            width: 182px;
+        }
+    }
+    p {
+        margin-bottom: 24px;
+    }
+    &.cta-contact-us {
+        width: 950px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        .btn {
+            width: 182px;
+            display: inline-block;
+            line-height: 50px;
+        }
+    }
+}
